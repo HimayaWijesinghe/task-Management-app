@@ -15,10 +15,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Notes"
+        android:text="Your Notes"
         android:layout_marginStart="18dp"
         android:textColor="@color/pink"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notesRecyclerView"
