@@ -35,7 +35,7 @@ class NotesAdapter(private var notes: List<Note>,context: Context) :
     @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]
-        holder.contentTextView.text = note.content
+        holder.titleTextView.text = note.title
         holder.contentTextView.text = note.content
 
         holder.updateButton.setOnClickListener{

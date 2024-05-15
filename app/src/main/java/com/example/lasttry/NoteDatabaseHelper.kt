@@ -66,7 +66,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             put(COLUMN_CONTENT,note.content)
         }
 
-        val whereClause ="COLUMN_ID = ?"
+        val whereClause ="$COLUMN_ID = ?"
         val whereArgs = arrayOf(note.id.toString())
         db.update(TABLE_NAME, values,whereClause,whereArgs)
         db.close()
