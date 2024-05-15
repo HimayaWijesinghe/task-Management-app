@@ -34,6 +34,19 @@ class UpdateActivity : AppCompatActivity() {
         binding.updatesaveButton.setOnClickListener{
             val newTitle = binding.updateTitleEditText.text.toString()
             val newContent = binding.updateContentEditText.text.toString()
+
+            if (newTitle.isEmpty()) {
+                binding.updateTitleEditText.error = "Title cannot be empty"
+                binding.updateTitleEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (newContent.isEmpty()) {
+                binding.updateContentEditText.error = "Content cannot be empty"
+                binding.updateContentEditText.requestFocus()
+                return@setOnClickListener
+            }
+
             val updateNote = Note(noteId,newTitle,newContent)
             db.updateNote(updateNote)
             finish()
